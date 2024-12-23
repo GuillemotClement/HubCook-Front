@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import RecipeCard from "../../components/Recipe/RecipeCard/RecipeCard.tsx";
 
 export default function RecipePage() {
 
@@ -18,16 +19,13 @@ export default function RecipePage() {
   }, [])
 
   const recipes = recipeList.map(recipe => (
-    <li key={recipe.id }>
-      <img src={recipe.image} alt=""/>
-      <h2>{ recipe.name }</h2>
-    </li>
+    <RecipeCard key={recipe.id} recipe={recipe}/>
   ))
 
   return (
       <div className="">
-        <h1>Nos recettes</h1>
-        <div className="">
+        <h1 className="text-center font-bold text-xl mb-3">Nos recettes</h1>
+        <div className="grid grid-cols-5 gap-3">
           { recipes}
         </div>
       </div>
