@@ -25,7 +25,7 @@ export default function RecipePage() {
   return (
       <div className="">
         <h1 className="text-center font-bold text-xl mb-3">Nos recettes</h1>
-        <div className="grid grid-cols-5 gap-3">
+        <div className="grid grid-cols-4  gap-3">
           { recipes}
         </div>
       </div>

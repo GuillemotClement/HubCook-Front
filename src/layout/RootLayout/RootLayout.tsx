@@ -1,6 +1,6 @@
 import Footer from "../../components/Footer/Footer.tsx";
 import Header from "../../components/Header/Header.tsx";
-import RecipePage from "../../pages/RecipePage/RecipePage.tsx";
+import {Outlet} from "react-router";
 
 export default function RootLayout() {
   return (
@@ -8,7 +8,7 @@ export default function RootLayout() {
         <Header/>
         <main className="flex-1">
           <div className="container mx-auto py-6">
-            <RecipePage />
+            <Outlet />
           </div>
         </main>
         <Footer />
